@@ -1,0 +1,25 @@
+# TMXC OS Build & Compilation Guide for Volla Phone Quintus
+
+This document outlines the requirements and steps to compile and build TMXC OS for the Volla Phone Quintus hardware platform.
+
+## Prerequisites
+To successfully compile TMXC OS, ensure you have the following toolchain installed on your development environment:
+- GCC (GNU Compiler Collection) configured for C development
+- GNU Assembler (GAS) or compatible assembler for low-level architecture routines
+- PowerShell (for Windows build scripts) or Bash (for Linux/Unix environments)
+- Make / CMake (depending on the project build structure)
+
+## Build Instructions (Windows / PowerShell)
+1. Open PowerShell in the root directory of the repository.
+2. Run the provided build script:
+   powershell -ExecutionPolicy Bypass -File .\build_quintus.ps1
+
+## Build Instructions (Linux / Bash)
+1. Open a terminal in the root directory of the repository.
+2. Give execution permissions to the build script (if applicable):
+   chmod +x build.sh
+3. Run the script:
+   ./build.sh
+
+## Output
+Upon successful compilation, the generated binary image files and configuration packages will be available in the `/bin` or `/output` directory, structured for target evaluation on the Volla Phone Quintus.
